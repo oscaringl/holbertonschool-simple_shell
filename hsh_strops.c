@@ -19,7 +19,9 @@ char *hsh_strdup(const char *str)
 	if (dup == NULL)
 		return (NULL);
 	for (j = 0; j <= i; ++j)
+	{
 		dup[j] = str[j];
+	}
 	return (dup);
 }
 
