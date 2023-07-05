@@ -1,5 +1,3 @@
-#include "hsh.h"
-
 /**
  * hsh_strdup - copy `str' and return pointer
  * @str: string to copy
@@ -15,11 +13,14 @@ char *hsh_strdup(const char *str)
 		return (NULL);
 	for (i = 0; str[i]; ++i)
 		;
+
 	dup = malloc(sizeof(char) * (i + 1));
 	if (dup == NULL)
 		return (NULL);
+
 	for (j = 0; j <= i; ++j)
 		dup[j] = str[j];
+
 	return (dup);
 }
 
@@ -41,5 +42,6 @@ int hsh_strcmp(const char *s1, const char *s2)
 
 	while (s1[i] == s2[i] && s1[i] && s2[i])
 		++i;
+
 	return (s1[i] - s2[i]);
 }
